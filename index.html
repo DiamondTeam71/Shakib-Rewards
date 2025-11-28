@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Additional Puroskar By Shakib</title>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Hind Siliguri', 'Poppins', sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+body {
+  background: url("https://ludooclub.netlify.app/assets/images/ponno.jpg") no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  
+  text-align: center;
+  color: white;
+}
+
+/* পরে আপডেট করা যেতে পারে
+header i {
+  color: aqua;
+  font-size: 36px;
+  margin-right: 10px;
+} */
+
+header {
+  background: red;
+  padding: 20px;
+  font-size: 26px;
+  color: white;
+  border-top: 4px solid black;
+  border-bottom: 4px solid black;
+  display: flex;
+  align-items: center;   
+  justify-content: center; 
+  gap: 10px;  
+}
+
+.header-logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  border: 3px solid black;
+  object-fit: cover; 
+}
+
+ .span-all {
+  color: gold; 
+  font-weight: bold; 
+}
+.container{
+    max-width:900px;
+    margin:5px auto;
+    padding:20px;
+}
+.reward-card{
+    background:red;
+    margin-bottom:25px;
+    padding:20px;
+    border-radius:38px;
+    border: 6px solid black;
+}
+.reward-top{
+    display:flex;
+    gap:20px;
+    align-items:center;
+}
+.reward-top img{
+    width:130px;
+    height:130px;
+    border-radius:37px;
+    object-fit:cover;
+    border: 4px solid black;
+}
+.reward-title{
+    font-size:22px;
+    font-weight:800;
+}
+.need{
+    font-size:15px;
+    color:#00ffee;
+    margin-top:-4px;
+}
+.bar-box{
+    width:100%;
+    background:#0b0e17;
+    height:12px;
+    border-radius:10px;
+    margin-top:10px;
+    overflow:hidden;
+}
+.bar{
+    height:12px;
+    background:#3c9cff;
+    width:0%;
+    transition:0.6s;
+}
+.share-btn{
+    display:block;
+    margin:auto;
+    margin-top:15px;
+    background:#3c51ff;
+    padding:14px 30px;
+    border: 5px solid black;
+    border-radius:37px;
+    font-size:18px;
+    color:white;
+    cursor:pointer;
+    font-weight:700;
+}
+.popup{
+    display:none;
+    position:fixed;
+    top:0; left:0;
+    width:100%; height:100%;
+    background:rgba(0,0,0,0.75);
+    justify-content:center;
+    align-items:center;
+    z-index:999;
+}
+.popup-box{
+    background:#1b2033;
+    padding:25px;
+    width:340px;
+    border-radius:37px;
+    text-align:center;
+    border: 6px solid black;
+}
+.social{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+    margin-top:15px;
+}
+.social button{
+    background:#27304b;
+    border:none;
+    padding:12px;
+    border-radius:37px;
+    color:white;
+    border: 5px solid black;
+    cursor:pointer;
+    transition:.3s;
+    font-size:14px;
+}
+.social button:hover{
+    background:#384266;
+}
+.count{
+    text-align:center;
+    margin-top:20px;
+    font-size:22px;
+    color:#00ffe7;
+    font-weight:700;
+    border: 6px solid black;
+    margin: 20px 20px;
+    border-radius: 37px;
+    background: red;
+}
+marquee {
+  background: yellow;
+  border-bottom: 4px solid black;
+  padding: 15px;
+  font-weight: bold;
+  color: black;
+}
+.slider-container {
+  position: relative;
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 90%;
+  margin: 0 5%;
+}
+
+.slide img {
+  width: 100%;
+  height: 200px;
+  border-radius: 35px;
+  border: 6px solid black;
+  display: block;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+
+.slider-dots {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.slider-dots .dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: #bbb;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.slider-dots .dot.active {
+  background: red;
+  border: 2px solid black;
+}
+
+footer {
+  background: red;
+  padding: 40px 20px;
+  color: white;
+  font-weight: bold;
+  border-top: 5px solid black;
+  position: relative;
+  margin-top: 14px;
+  z-index: 100;  
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-left {
+  display: inline-block; 
+}
+
+.footer-logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  border: 3px solid black;
+  object-fit: cover; 
+  vertical-align: middle;
+}
+
+.footer-left h2 {
+  font-size: 30px;
+  margin: 0 0 0 10px; 
+  display: inline-block;
+  vertical-align: middle;   
+  line-height: 60px; 
+  
+}
+
+.footer-left p {
+  font-size: 18px;
+  color: #f5f5f5;
+}
+
+.Xrabon {
+  color: gold;
+  text-decoration: ;
+  font-size: 24px;  
+} 
+
+.footer-left p i {
+  color: yellow;
+  border: 3px solid black;
+  border-radius: 50%;
+  font-size: 26px;
+}
+
+.footer-left h2 i {
+  color: aqua;
+  font-size: 56px;
+}
+
+.footer-right a {
+  color: white;
+  font-size: 22px;
+  margin-left: 20px;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.footer-right a:hover {
+  color: gold;
+  transform: scale(1.3);
+}
+
+.footer-right i {
+  background: white;
+  padding: 10px;
+  color: black;
+  border-radius: 12px;
+  border: 3px solid black;
+}
+
+@media(max-width:768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+  .footer-right a {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+</style>
+</head>
+<body>
+    
+    <script type='text/javascript' src='//pl28151967.effectivegatecpm.com/f1/27/f7/f127f7324d7c59e7cfd1a51d437e3ebb.js'></script>
+
+<Header>
+ সাকিব ভাইয়ের পক্ষ থেকে শেয়ার করে জিতে নিন, এক্সক্লুসিভ অফার্স!
+</Header>
+
+<marquee><i class="fas fa-bolt"></i> আমাদের এই সাইটে আপনারা সহজেই, আমাদের সাইটের লিংক শেয়ার করে জিতে নিতে পারেন, দারুন:নিদারুণ সব অফার্স!</marquee>
+
+<button class="share-btn" onclick="openPopup()">Share Now</button>
+<div class="count">মোট শেয়ার হয়েছে: <span id="total">0</span></div>
+
+<script src="load.js"></script>
+<div class="popup" id="popup">
+    <div class="popup-box">
+        <h2>Share Via</h2>
+        <div class="social">
+            <button onclick="shareClick('facebook')">Facebook</button>
+            <button onclick="shareClick('whatsapp')">WhatsApp</button>
+            <button onclick="shareClick('messenger')">Messenger</button>
+            <button onclick="shareClick('twitter')">Twitter</button>
+            <button onclick="shareClick('telegram')">Telegram</button>
+            <button onclick="shareClick('linkedin')">LinkedIn</button>
+        </div>
+        <button onclick="closePopup()" style="margin-top:18px;background:#ff2468;padding:10px 20px;border:none;border-radius:8px;color:white;font-size:16px;">
+            Close
+        </button>
+    </div>
+</div>
+
+<div class="slider-container">
+  <div class="slider-track">
+       <div class="slide"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6QIwblyjXTVXl-KHWC8ds2pJPhzLhqP0RP5Nd73DGHQ&s" alt="Game Poster 4"></div>
+    <div class="slide"><img src="https://blog.allbanglanewspaper.org/wp-content/uploads/abul-hossain-fb-1.jpg" alt="Game Poster 1"></div>
+    <div class="slide"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTGjQqfiEewO3EKFpl7e3XE7ToODOGPIlpRQQfdp8kTg&s=10" alt="Game Poster 2"></div>
+    <div class="slide"><img src="data:image/jpeg;base64,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" alt="Game Poster 3"></div>
+   
+  </div>
+  <div class="slider-dots">
+    <span class="dot active"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+</div>
+
+
+<div class="container" id="rewardsContainer"></div>
+<div class="review-slider-container">
+    <div class="review-track" id="reviewTrack"></div>
+</div>
+
+<style>
+.review-slider-container{
+    width: 100%;
+    overflow: hidden;
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+}
+.review-track{
+    display: flex;
+    gap: 20px;
+    transition: transform 0.5s ease-in-out;
+}
+.review-card{
+    min-width: 280px;
+    background: red;
+    border-radius: 30px;
+    border: 5px solid black;
+    margin: 0;
+    padding: 15px;
+    color: white;
+    flex-shrink: 0;
+}
+.review-top{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+.review-top img{
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    border: 3px solid black;
+    object-fit: cover;
+}
+.review-name{
+    font-size: 18px;
+    font-weight: 800;
+}
+
+
+.review-text{
+    font-size: 15px;
+    margin-top: 8px;
+    color: #ffe9a3;
+}
+</style>
+
+<script>
+const reviewsList = [
+"সাইটটা সত্যিই দারুণ, শেয়ার করার পর গিফ্ট পাওয়া সহজ ও দ্রুত।",
+"আমি এক্সক্লুসিভ অফার পেয়েছি, খুব ভালো অভিজ্ঞতা।",
+"প্রোডাক্টের মান খুব ভালো, এবং সাপোর্টও অসাধারণ।",
+"শেয়ার টু উইন সিস্টেম সত্যিই কাজ করছে, খুব খুশি।",
+"দ্রুত ডেলিভারি এবং সঠিক সময়ে গিফ্ট এসেছে।",
+"ভাই, এই সাইট ব্যবহার করে অনেক উপকৃত হয়েছি।",
+"অফারগুলো খুবই আকর্ষণীয় এবং ব্যবহারযোগ্য।",
+"আমি প্রথমবার শেয়ার করেছি, এবং তাত্ক্ষণিকভাবে পেয়েছি বোনাস।",
+"সাপোর্ট টিম খুব সহায়ক, সব প্রশ্নের উত্তর দিচ্ছে।",
+"ডিজাইন এবং ইন্টারফেস খুবই ইউজার‑ফ্রেন্ডলি।",
+"ভাল মানের প্রোডাক্ট এবং সহজ প্রক্রিয়ায় পাওয়া যায়।",
+"সাইটটি বিশ্বাসযোগ্য এবং খুব দ্রুত কাজ করছে।",
+"আমি বন্ধুদেরও সুপারিশ করেছি, সবাই খুশি।",
+"শেয়ার করার পরও কোনো ঝামেলা হয়নি, পুরো প্রক্রিয়া smooth।",
+"অফারগুলো নিয়ে কোনো বিভ্রান্তি নেই, সব পরিষ্কার।",
+"আমি প্রতিদিন শেয়ার করছি এবং নিয়মিত গিফ্ট পাচ্ছি।",
+"সেটআপ এবং রেজিস্ট্রেশন খুব সহজ, খুব কম সময়ে শুরু করা যায়।",
+"সাইটটি নিরাপদ এবং ব্যক্তিগত তথ্য সংরক্ষণ করছে।",
+"এখানে পাওয়া অফারগুলো অন্যান্য সাইটের তুলনায় অনেক ভালো।",
+"আমি নতুন ইউজার হলেও সহজে সব বুঝতে পেরেছি।",
+"সার্ভিস খুবই দ্রুত, কখনও কোনো ডিলে হয়নি।",
+"গিফ্ট রিডিমের প্রক্রিয়াও অনেক সহজ এবং দ্রুত।",
+"শেয়ার করার পরই পুরস্কার পাওয়া যায়, ধন্যবাদ।",
+"সাইটটি সত্যিই ব্যবহারযোগ্য, আমি সন্তুষ্ট।",
+"প্রোডাক্ট এবং সার্ভিস মান একদম সঠিক।",
+"আমি সাইটের নিয়মিত ইউজার, সব সময় ভাল অভিজ্ঞতা।",
+"গিফ্ট পাওয়ার পরই আমার বন্ধুরাও প্রোডাক্ট কিনেছে।",
+"সাপোর্ট এবং রিসোর্সগুলো খুবই সাহায্য করছে।",
+"সব ধাপে ধাপে খুবই পরিষ্কার নির্দেশনা দেওয়া হয়েছে।",
+"শেয়ার টু উইন গিফ্টের অভিজ্ঞতা দারুণ, আমি খুব খুশি।"
+];
+
+let totalReviews = parseInt(localStorage.getItem("review_count")) || 30;
+localStorage.setItem("review_count", totalReviews);
+
+const track = document.getElementById("reviewTrack");
+
+function loadReviews(){
+    track.innerHTML = "";
+    for(let i=0; i<totalReviews; i++){
+        const text = reviewsList[Math.floor(Math.random()*reviewsList.length)];
+        const card = document.createElement("div");
+        card.className = "review-card";
+        card.innerHTML = `<div class="review-top"><img src="https://i.ibb.co/pRXZ7t4/user.png"><div><div class="review-name">User ${i+1}</div><div class="review-text">${text}</div></div></div>`;
+        track.appendChild(card);
+    }
+}
+loadReviews();
+
+let sliderIndex = 0;
+function autoSlide(){
+    const containerWidth = track.parentElement.offsetWidth;
+    const cards = document.querySelectorAll(".review-card");
+    if(cards.length===0) return;
+    const style = window.getComputedStyle(cards[0]);
+    const gap = 20;
+    const totalCardWidth = cards[0].offsetWidth + gap;
+    sliderIndex++;
+    const maxIndex = Math.ceil(track.scrollWidth / totalCardWidth) - Math.floor(containerWidth / totalCardWidth);
+    if(sliderIndex > maxIndex) sliderIndex = 0;
+    const translateX = sliderIndex * totalCardWidth;
+    track.style.transform = `translateX(-${translateX}px)`;
+}
+setInterval(autoSlide, 2500);
+</script>
+
+<footer>
+  <div class="footer-container">
+    <div class="footer-left">
+      <h2>
+  <a href="" target="_blank">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTGjQqfiEewO3EKFpl7e3XE7ToODOGPIlpRQQfdp8kTg&s=10" alt="Logo" class="footer-logo">
+  </a>
+  Shakib<span class="span-all"> Rewards</span> — Shakib Ahmed
+</h2>
+      <p><i class="fas fa-copyright"></i> সাকিব আহমেদ ২০২৫ | সম্পুর্ন পুরষ্কার পাওয়ার জন্য নির্দিষ্ট টার্গেট পূরণ করতে হবে, তারপর আপনার ফর্ম ওপেন হবে!</p>
+    </div>
+    <div class="footer-right">
+        
+      <a href="https://youtube.com/@lotterylive?si=JuAwZmkyU-XTnNvz"><i class="fab fa-youtube"></i></a>
+    </div>
+  </div>
+</footer>
+
+<script>
+const rewards = [
+  { name: "iPhone 15 Pro Max", img: "data:image/jpeg;base64,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", need: 300 },
+  { name: "Samsung Smart TV", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6QIwblyjXTVXl-KHWC8ds2pJPhzLhqP0RP5Nd73DGHQ&s", need: 150 },
+  { name: "Dell Laptop", img: "data:image/jpeg;base64,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", need: 200 },
+  { name: "Gaming Headphone", img: "https://www.startech.com.bd/image/cache/catalog/earphone/asus/rog-cetra-ii-core/rog-cetra-ii-core-003-228x228.webp", need: 80 },
+  { name: "iPad Air", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5dP9MUpjq7p6s0vgvX00PIlFX9M4yuWjKLrAEXtWVmQ&s=10", need: 120 },
+  { name: "Smart Watch", img: "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAA0JCgsKCA0LCgsODg0PEyAVExISEyccHhcgLikxMC4pLSwzOko+MzZGNywtQFdBRkxOUlNSMj5aYVpQYEpRUk8BDg4OExETJhUVJk81LTVPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT//AABEIAMAAwAMBIgACEQEDEQH/xAAcAAEAAgIDAQAAAAAAAAAAAAAABQcEBgECAwj/xABGEAABAwMBBAYHBAYHCQAAAAABAAIDBAURBhIhMVETFCJBYXEHIzKBkbHBQlJyoTM2Q3N00SQmYpKi4fElNDVTVGOD0vD/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/ALOREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBFwTgZPBYk91t9P8ApqyFh5FwygzEUPJqe0MP+87X4WFeR1bac425f7iCdRQrNU2l5x0z2/iYVn01zoao4p6qJ55B29BlouMrlAREQEREBERAREQEREBERARFw44aSSABvJKATjetYvWsaWic6CiDaiYbic9lp+qg9WatNUX0NskcIAcSStONvwHh81pxegm6/UVwrnEz1LsH7DOy0e5RxqCeLisTaQFUZbZXP3DvXD6oRdlrekeOI7gti0vpoXammlqXvjiHZa5u4l3h5KD1Dp2usM2ZfW0zj2Jm8PIjuKgxutTu39MyIcg3K7NqahrtptTG48iCCo0PXO2g220axr7fI2OrBmgPc45/uu+isS13SkutMJqSTaHBw72nxVItkc0YHaaeLTwWbbLtU2qrbU0cjg3OCCTjyPggu5FE6fvlNe6TpYXAStHrI8+z/kpZAREQEREBERAREQERRt/u0Nks1TcZhlsTey37zicAfEoObpeaG0xB9bMGk+ywDLne5aHqLVpukZpqWV9PTH2uz2n+e8blpFbdLjdqmSqqpiXyHJLRjHgPBYTo5HEDaeXHcBnignT1QcZZvcxv/suC6jH2qg+9o+ij6W0ySN2pnuaOWd69pLOC0lhkGO/O5BltdQk4LqoeILD9FkNp6UgOgrGF3HYk7JPkVq9TBNTP2XuOO45Xkwbb2hx4njyQX7o+SKTTtMIsdjIf+LP+alK+jgr6SSlqow+KQYcCqw0ZeKix3Cmo6pwkoq14jbL913dn5K1uKCj7/a3We7z0Zftta7LHeB4Z8VH5WfqerfVajrZHHIMrmY8jj6KMzg4VR6grs048QdxHguKSSmFQOuNkdCQQejOHNPcR3HyXQuG0QDkZ3HhlBn2W6VFnubZYHnLTw7nt5FXTba2K4UMVXD7Ejcjw8FRDDFtu6TIdjEZHPPerV9HMzpLC9jiSI5SBnxAKitsREQEREBERAREQFXfpbqndTt9Aw/ppS8jnj/VWIqz9KGHaisrD913zCDWRber0gc7DRjiSu0NEZKJ8sZwXuDcg43d62S6W8TxRNbgbO/HPcutvoWNpJoiRhkufLI4IIq0QR0+WVByA4NYPP/4qJvIllq3Pc3sNPYHcAp2shYyZlfAcwwkEgc84XtU00FfTukhx4hBpJaCNk8Dx8Fh7BjqNg9zsKTq4TBM5hG5YtwjMdRG8/ba0oNhpz1jT9VE52y9rA+Pfjtt3jBVw2is69aaSrxgzQskcORLQSCqMs461eqamecxNPA/FWXapTbdZ09vpwG01ZSF5YOAe08ffvQaTqqiltmpanZGyel6eM9285B+OVB1MhnqpZWRCMPcXbI4DPH81avpEs/XLWLhG3M1Ke0ecZ4j3cVWP5qoxcSY4IA/kspcIOkbDtbTuKuLQ1H1TTcBI7U2ZD7+CqNgy4DmVcmkJum01RnPstLfgVFTSIiAiIgIiICIiAqp9LchjvlsePsxOP5hWsqm9MP8Axag/cu+aCTt1XHc7bG9jgXtADhneuzKeR9DWRRDDyQQq6tVyqKGTaheW8+S26yasZ1k9eBaHD2mjOD4hAZBLT26opp2uyCc+GcFR9sqjS1Ia49lxwQtifWtuNdKKZu1C9oaSR7S1+toY6Srcx1U1rGnJJB3IPPU1MGTiRg3OG5R+pKbq4oRxzGN/uWXeLpFVCKOA7QjHZdjieZXnq44bbozxEIyg8bdR1BnjrqMtMkILnNccZAyrR0vRPrqmDUVS1jXSUoZTsaSdlp3knxKr+w5NLPh2yTE/f7irR0b+qNq/hmfJBK1ELainkgkGWyNLTnxVEVEJp6iWFwwY3lvwOFfhVKalYI9SXBreHTu/mgikXOEVR2i/SN81a/o+ft6ZYCfZkcPzVUR/pG+atH0cH+r7xymcorbEREBERAREQEREBVN6YB/teg/cu+atlVP6YN12oP3LvmEGsWekhy2WqY2QHe1jhkY5lbdHHRV8YifRxjuDmNAcPIrXKVg2YxyaOC261QNgg6d/AIOkUbLVTlu0OlccB3Ic1rddU9anLOja2POAAN58SeOVK3+rDurSNOCctOFBNIdO3xcPmgzZLTTOpo5nSdFI89kBoDfIqJ1ZOJbw2NvsxNDFM6jf0NNDANx4rUq5xfXvLjkkj5BBtOnGh0c+0MtEEhx44Ks/Rv6oWr+GZ8lWOm/0U/8ADy/JWdo39ULV/DM+SCaVK6mdtakuLv8Avu+auoqldRh0eorgCN4qHED35QYNVSPiibna2iQCvSopRDCxwO/g4L1qano2xt6TbLiN54ALtWzRvpg0N7bjk+SqMGMesb5qzvRwP6vOPOYqsWHBzyGVavo/j2NMRH7z3H81FbMiIgIiICIiAiIgKqvTGP6fbXc4nj8wrVVeel6idJaqOtaM9DIWOPIFBptqk6TovILcK6ToLdGwcslaLpueDrAinmbCQctc/gfBbNfrjTPhDYpWkBu92dyCGusjpKaEtzueVj9PJGGB1OzaLhl7ZCdneO5TtNSQ3C3xvpztOiOXNPF3j5rwht8UcMpnf2mgkY7vNBF32p6xVZHBoUHVb613mB+QWbI/Z9dL7I4Z+0eSjWkum2jvJKDcNPENp53O3f0eTGfIq0dIgt0laQf+kjP+EKqqbNNYaggesnaIYh3uc7kritdMKK10lICSKeBkYz/ZaB9EGWVUuv4o4dVTGI5MsTJHjk7ePkB8Vasj3DIaMqmdT1XXdRVc7XZG3sN8m7vogjC0OxnuXLj3kroXlvELr6x3AYVR22su2W8c71dGkoeg01RMI3mPaPvKp2ipjJURxtBLpHho8ycK9aaIQU0ULeEbA34BRXqiIgIiICIiAiIgLBvNtgu9qqKCp/RzN2cjiDnIPuOFnIg+ebzp+4WeskpaqLJaey4cHDuIUYYng72O+C+jLjbKK50/Q1tO2VndncR5HiFoGp9FuoI3VlsjM9O324iTtt8QRxCCv6C41VEextYWZVX2oqItgh67F0R4Rf4yVxmLvid7nD+SCFcJHuLi05PguWBzXghpJHcRlTPqP+S8/wDkx9F3EowGRxtjadxI3koNm0JYai8XGG6XE+oozmOPGG7Xd/P4K1goLRgiGmqXofHa/FnepwoIrUtxba7LUVP7Qt2I/Fx3BUycucSe9bZru9C43FtFTuzT02cnuc/v+C1bZQdqZwhqoZnRCRsTg7Zdwd4FelZUzVtZLVVBBkkdk4GAPAeC8g1d2tVGw6GtxrL6yZzfV03rD5935q0woDRlqNts7XytxPUdt45DuC2BQEREBERAREQEREBERAXBGRhcog0DV2jd8lwtEIye1LA0ceZaPotBLCDgjBHHKv0jK12/aSorsXTR4p6o8ZGjc7zHegqLCYWx3LSd2t7iXU3TRj9pD2h8OIUK+ne04c0g8iqNm0VqMWyY0tW49WmdnP3HcMqb1XqyNkL6G0yh8jxh8zDkNHeAear0Rlp3ZWQwhwxIPeoPHZ35OfeuwYsoRNPsld46WSV+zFG57uTRkqjD2VtOjtPGuqhW1TCKaI5bn9of5LMsejJZJG1Fz9XGP2X2nefILeYYmQxNjiYGMaMBo4AKDuBjuXKIgIiICIiAiIgIiICIiAiIgIiIOMLHqLfR1QxUUsMoP32ArJRBDyaXsknGgjb+AlvyXidH2QnIp3jykKnkQQ0WlrNGcijDvxOJ+qkqeipqUYp4I4h/YaAvdEDCIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiD//Z", need: 90 },
+  { name: "Bluetooth Speaker", img: "data:image/jpeg;base64,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", need: 70 },
+  { name: "Camera", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdn7JMhtWBq-7n_TNHEJQKMfYZMIOTmcGIMCbd4jougQ&s=10", need: 130 },
+  { name: "Fitness Tracker", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSNcPY-HGtP4TdmS7BS7PMcCyJc7WDuTy4Dcsla8mlWA&s=10", need: 60 },
+  { name: "VR Glasses", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7eXdy_MjsWED9-val9f8MIpr9vx737A4m3IxKT9I3qA&s=10", need: 100 }
+];
+
+let total = parseInt(localStorage.getItem("totalShares")) || 0;
+document.getElementById("total").innerText = total;
+
+const shareUrl = "https://shakibreward.netlify.app/";
+
+function generateRewards() {
+  const container = document.getElementById('rewardsContainer');
+  container.innerHTML = '';
+  rewards.forEach((r, index) => {
+    container.innerHTML += `
+      <div class="reward-card">
+        <div class="reward-top">
+          <img src="${r.img}">
+          <div>
+            <div class="reward-title">${r.name}</div>
+            <div class="need">লাগবে: <b>${r.need} শেয়ার</b></div>
+          </div>
+        </div>
+        <div class="bar-box">
+          <div class="bar" id="bar${index}"></div>
+        </div>
+        <p style="margin-top:8px;">আপনার শেয়ার: <span id="myShare${index}">0</span> / ${r.need}</p>
+      </div>`;
+  });
+}
+generateRewards();
+
+function openPopup(){ document.getElementById("popup").style.display="flex"; }
+function closePopup(){ document.getElementById("popup").style.display="none"; }
+
+function shareClick(type){
+ 
+  total++;
+  localStorage.setItem("totalShares", total);
+  document.getElementById("total").innerText = total;
+
+  if(type==="facebook"){ window.open("https://www.facebook.com/sharer/sharer.php?u="+shareUrl,"_blank"); }
+  if(type==="whatsapp"){ window.open("https://api.whatsapp.com/send?text="+shareUrl,"_blank"); }
+  if(type==="messenger"){ window.open("fb-messenger://share/?link="+shareUrl); }
+  if(type==="twitter"){ window.open("https://twitter.com/intent/tweet?url="+shareUrl,"_blank"); }
+  if(type==="telegram"){ window.open("https://t.me/share/url?url="+shareUrl,"_blank"); }
+  if(type==="linkedin"){ window.open("https://www.linkedin.com/sharing/share-offsite/?url="+shareUrl,"_blank"); }
+
+  updateRewards();
+}
+
+function updateRewards() {
+  rewards.forEach((r, index) => {
+    let count = Math.min(total, r.need);
+    document.getElementById(`myShare${index}`).innerText = count;
+    document.getElementById(`bar${index}`).style.width = (count / r.need * 100) + "%";
+  });
+}
+
+
+updateRewards();
+</script>
+
+</body>
+</html>
