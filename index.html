@@ -504,7 +504,7 @@ function loadReviews(){
         const text = reviewsList[Math.floor(Math.random()*reviewsList.length)];
         const card = document.createElement("div");
         card.className = "review-card";
-        card.innerHTML = `<div class="review-top"><img src="https://i.ibb.co/pRXZ7t4/user.png"><div><div class="review-name">User ${i+1}</div><div class="review-text">${text}</div></div></div>`;
+        card.innerHTML = `<div class="review-top"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFfImJvMjSnM7RWELdGKaZbu8NxMk0MYEuQJkWZUHgxxgAmwTG0OIUel4&s"><div><div class="review-name">User ${i+1}</div><div class="review-text">${text}</div></div></div>`;
         track.appendChild(card);
     }
 }
