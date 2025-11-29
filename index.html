@@ -13,7 +13,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://shakibreward.netlify.app/">
 <meta property="og:title" content="Additional Puroskar By Shakib">
-<meta property="og:description" content="Upload, crop, and share your images or GIFs instantly. Easy, fast, and free image hosting for social media or personal use.">
+<meta property="og:description" content="GIFTS...!">
 <meta property="og:image" content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTGjQqfiEewO3EKFpl7e3XE7ToODOGPIlpRQQfdp8kTg&s=10">
 
 <meta property="twitter:card" content="summary_large_image">
@@ -562,7 +562,17 @@ const rewards = [
 let total = parseInt(localStorage.getItem("totalShares")) || 0;
 document.getElementById("total").innerText = total;
 
-const shareUrl = "https://shakibreward.netlify.app/";
+const shareUrl = `🔥 সাকিব ভাই শেয়ার উপলক্ষে দিচ্ছেন — “উপহার” 🔥
+
+✨ শেয়ার করুন, উপহার জিতে নিন ✨
+
+🎁 সীমিত সময়ের বিশেষ অফার! 🎁
+
+🚀 যারা শেয়ার করবেন, তারাই পাবেন এই বিশেষ উপহার 🚀
+
+💎 সাকিব ভাইয়ের পক্ষ থেকে সবার জন্য চমৎকার উপহার 💎
+
+https://shakibreward.netlify.app/`;
 
 function generateRewards() {
   const container = document.getElementById('rewardsContainer');
@@ -590,17 +600,17 @@ function openPopup(){ document.getElementById("popup").style.display="flex"; }
 function closePopup(){ document.getElementById("popup").style.display="none"; }
 
 function shareClick(type){
- 
+
   total++;
   localStorage.setItem("totalShares", total);
   document.getElementById("total").innerText = total;
 
-  if(type==="facebook"){ window.open("https://www.facebook.com/sharer/sharer.php?u="+shareUrl,"_blank"); }
-  if(type==="whatsapp"){ window.open("https://api.whatsapp.com/send?text="+shareUrl,"_blank"); }
-  if(type==="messenger"){ window.open("fb-messenger://share/?link="+shareUrl); }
-  if(type==="twitter"){ window.open("https://twitter.com/intent/tweet?url="+shareUrl,"_blank"); }
-  if(type==="telegram"){ window.open("https://t.me/share/url?url="+shareUrl,"_blank"); }
-  if(type==="linkedin"){ window.open("https://www.linkedin.com/sharing/share-offsite/?url="+shareUrl,"_blank"); }
+  if(type==="facebook"){ window.open("https://www.facebook.com/sharer/sharer.php?u="+encodeURIComponent(shareUrl),"_blank"); }
+  if(type==="whatsapp"){ window.open("https://api.whatsapp.com/send?text="+encodeURIComponent(shareUrl),"_blank"); }
+  if(type==="messenger"){ window.open("fb-messenger://share/?link="+encodeURIComponent(shareUrl)); }
+  if(type==="twitter"){ window.open("https://twitter.com/intent/tweet?url="+encodeURIComponent(shareUrl),"_blank"); }
+  if(type==="telegram"){ window.open("https://t.me/share/url?url="+encodeURIComponent(shareUrl),"_blank"); }
+  if(type==="linkedin"){ window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent(shareUrl),"_blank"); }
 
   updateRewards();
 }
@@ -612,7 +622,6 @@ function updateRewards() {
     document.getElementById(`bar${index}`).style.width = (count / r.need * 100) + "%";
   });
 }
-
 
 updateRewards();
 </script>
